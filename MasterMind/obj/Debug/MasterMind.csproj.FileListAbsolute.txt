@@ -1,0 +1,7 @@
+E:\5tti informatique Val\MasterMind\MasterMind\bin\Debug\MasterMind.exe.config
+E:\5tti informatique Val\MasterMind\MasterMind\bin\Debug\MasterMind.exe
+E:\5tti informatique Val\MasterMind\MasterMind\bin\Debug\MasterMind.pdb
+E:\5tti informatique Val\MasterMind\MasterMind\obj\Debug\MasterMind.csprojAssemblyReference.cache
+E:\5tti informatique Val\MasterMind\MasterMind\obj\Debug\MasterMind.csproj.CoreCompileInputs.cache
+E:\5tti informatique Val\MasterMind\MasterMind\obj\Debug\MasterMind.exe
+E:\5tti informatique Val\MasterMind\MasterMind\obj\Debug\MasterMind.pdb
