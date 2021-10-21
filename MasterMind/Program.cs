@@ -8,13 +8,13 @@ namespace MasterMind
 {
     class Program
     {
+        //un commentaire meme si c'est n'importe quoi
         static void Color(out int[] table)
-        {
+        {           
             table = new int[4];
+            Random nbr = new Random();
             for (int i = 0; i < 4; i++)
-            {
-
-                Random nbr = new Random();
+            {           
                 table[i] = nbr.Next(1, 7);
             }
         }
