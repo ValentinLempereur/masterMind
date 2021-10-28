@@ -8,7 +8,7 @@ namespace MasterMind
 {
     class Program
     {
-        //un commentaire meme si c'est n'importe quoi
+        //nombre aléatoire
         static void Color(out int[] table)
         {           
             table = new int[4];
@@ -28,26 +28,63 @@ namespace MasterMind
             Console.WriteLine("entrer une combinaison");
             string combiUti = Console.ReadLine();
             Comparaison(combiUti, out compa);
-            Afficher(compa);
+
+
+
+
+            Red(table, compa, out int red);
+            Console.WriteLine($"nombre de pions rouge{red}");
             Console.ReadLine();
 
 
 
         }
+        //afficher la table
         static void Afficher(int[] table) {
             for (int i = 0; i < 4; i++) {
                 Console.Write(table[i]);       
             }
         }
 
+        //mettre le string en tableau
         static void Comparaison(string combiUti, out int[] compa) 
         {
             compa = new int[4];
             for (int i = 0; i <= 3; i++) 
             {
-                compa[i] = combiUti[i];
+                compa[i] = int.Parse(combiUti[i].ToString());
             }
-            //Afficher(compa);
         }
+
+        //recherche de pions rouges 
+        static void Red(int[] table, int[] compa, out int red) 
+        {
+            red = 0;
+            for (int i = 0; i <= 3; i++) 
+            {
+                if(compa[i] == table[i])
+                {
+                    red++; 
+                }
+            }
+        }
+
+        //recherche de pions blanc 
+
+        static void White(int[] table, int[] compa, out int white) 
+        {
+            white = 0;
+            for (int i = 0; i <= 3; i++) 
+            {
+                for (int f = 0; f <= 3; i++) 
+                {
+                    if (compa[i] == table[f]) 
+                    {
+                        white++;
+                    }
+                }
+            }
+        }
+
     }
 }
