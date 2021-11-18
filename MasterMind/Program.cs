@@ -22,6 +22,7 @@ namespace MasterMind
         {
             int[] table;
             int[] compa;
+            int white = 0;
             Color(out table);
             Afficher(table);
             Console.WriteLine();
@@ -33,7 +34,12 @@ namespace MasterMind
 
 
             Red(table, compa, out int red);
-            Console.WriteLine($"nombre de pions rouge{red}");
+            if (red != 4)
+            {
+                White(table, compa, out white);
+            }
+            Console.WriteLine($"nombre de pions rouge : {red}");
+            Console.WriteLine($"nombre de pions blanc : {white}");
             Console.ReadLine();
 
 
@@ -71,16 +77,20 @@ namespace MasterMind
 
         //recherche de pions blanc 
 
-        static void White(int[] table, int[] compa, out int white) 
+        static void White(int[] table, int[] compa, out int white)
         {
             white = 0;
-            for (int i = 0; i <= 3; i++) 
+
             {
-                for (int f = 0; f <= 3; i++) 
+                for (int i = 0; i <= 3; i++)
                 {
-                    if (compa[i] == table[f]) 
+                    for (int f = 0; f <= 3; f++)
                     {
-                        white++;
+                        if (compa[i] == table[f])
+                        {
+                            white++;
+                            f = 0;
+                        }
                     }
                 }
             }
