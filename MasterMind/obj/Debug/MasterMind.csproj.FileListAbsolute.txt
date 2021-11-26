@@ -19,3 +19,10 @@ C:\Users\softlocal\Documents\masterMind\MasterMind\obj\Debug\MasterMind.csproj.A
 C:\Users\softlocal\Documents\masterMind\MasterMind\obj\Debug\MasterMind.csproj.CoreCompileInputs.cache
 C:\Users\softlocal\Documents\masterMind\MasterMind\obj\Debug\MasterMind.exe
 C:\Users\softlocal\Documents\masterMind\MasterMind\obj\Debug\MasterMind.pdb
+C:\Users\160646\Desktop\masterMind\MasterMind\bin\Debug\MasterMind.exe.config
+C:\Users\160646\Desktop\masterMind\MasterMind\bin\Debug\MasterMind.exe
+C:\Users\160646\Desktop\masterMind\MasterMind\bin\Debug\MasterMind.pdb
+C:\Users\160646\Desktop\masterMind\MasterMind\obj\Debug\MasterMind.csprojAssemblyReference.cache
+C:\Users\160646\Desktop\masterMind\MasterMind\obj\Debug\MasterMind.csproj.CoreCompileInputs.cache
+C:\Users\160646\Desktop\masterMind\MasterMind\obj\Debug\MasterMind.exe
+C:\Users\160646\Desktop\masterMind\MasterMind\obj\Debug\MasterMind.pdb
