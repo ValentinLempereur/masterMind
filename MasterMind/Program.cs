@@ -25,31 +25,35 @@ namespace MasterMind
         }
         static void Main(string[] args)
         {
-            string reponse = "Vous avez pas trouvez la bonne combinaison, veuillez réessayer";
-            string win = "non";
-            int[] table;
-            int[] compa;
-            int white = 0;
-            int[] clone1;
-            Color(out table, out clone1);
-            Afficher(table);
-            Console.WriteLine();
-            if (win == "non")
+            string realod = "oui";
+            while (realod == "oui")
             {
-                for (int B = 1; B < 13; B++)
+                int B = 0;
+                string reponse = "Vous avez pas trouvez la bonne combinaison, veuillez réessayer";
+                string win = "non";
+                int[] table;
+                int[] compa;
+                int white = 0;
+                int[] clone1;
+                Color(out table, out clone1);
+                // permet d'afficher la réponse ->  Afficher(table);
+                Console.WriteLine();         
+                if (win == "non")
                 {
-                    if (B == 1)
+                    for (B = 1; B < 13; B++)
                     {
-                        Console.WriteLine("Entrer une combinaison");
-                        string combiUti = Console.ReadLine();
-                        Comparaison(combiUti, out compa);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Entrer une nouvelle combinaison");
-                        string combiUti = Console.ReadLine();
-                        Comparaison(combiUti, out compa);
-                    }
+                        if (B == 1)
+                        {
+                            Console.WriteLine("Entrer une combinaison");
+                            string combiUti = Console.ReadLine();
+                            Comparaison(combiUti, out compa);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Entrer une nouvelle combinaison");
+                            string combiUti = Console.ReadLine();
+                            Comparaison(combiUti, out compa);
+                        }
                         Clone(clone1, out table);
                         Red(table, compa, out int red);
                         if (red != 4)
@@ -62,6 +66,10 @@ namespace MasterMind
                             reponse = "Vous avez gagnez !!";
                             B = 13;
                         }
+                        if (B == 12)
+                        {
+                            reponse = "vous avez perdu !!";
+                        }
 
 
                         Console.WriteLine("------------------------------------");
@@ -69,25 +77,26 @@ namespace MasterMind
                         Console.WriteLine($"Nombre de pions blanc : {white}");
                         Console.WriteLine("------------------------------------");
                         Console.WriteLine(reponse);
-                        if (win == "non") 
+                        if (win == "non")
                         {
-                        Console.WriteLine($"Il vous reste {12 - B} tentative(s)");
+                            Console.WriteLine($"Il vous reste {12 - B} tentative(s)");
                         }
-                        Console.WriteLine("Appuyer sur ENTER pour passer à la suite");
                         Console.WriteLine("------------------------------------");
-                        Console.ReadLine();
+                    }
                 }
+                Console.WriteLine("Voulez-vous rejouer ? (oui ou non)");
+                realod = Console.ReadLine();
             }
 
 
 
         }
         //afficher la table
-        static void Afficher(int[] table) {
+        /*static void Afficher(int[] table) {
             for (int i = 0; i < 4; i++) {
                 Console.Write(table[i]);       
             }
-        }
+        }*/
 
         //mettre le string en tableau
         static void Comparaison(string combiUti, out int[] compa) 
